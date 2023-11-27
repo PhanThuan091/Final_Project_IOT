@@ -107,15 +107,15 @@ document.addEventListener('DOMContentLoaded', function () {
     };
     function updateBulbImage(value) {
         if (value <= 100 && value > 70) {
-            img1.src = "/image/fullLight.png";
+            img1.src = "./image/fullLight.png";
             firebase.database().ref("chuong1").update({ Den: "1" })
         }
         else if (value >= 20 && value <= 70) {
-            img1.src = "/image/halfLight.png";
+            img1.src = "./image/halfLight.png";
             firebase.database().ref("chuong1").update({ Den: "0.5" })
         }
         else {
-            img1.src = "/image/turned-off.png";
+            img1.src = "./image/turned-off.png";
             firebase.database().ref("chuong1").update({ Den: "0" })
         }
     };
